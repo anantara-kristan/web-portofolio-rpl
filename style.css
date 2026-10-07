@@ -1,0 +1,161 @@
+/* Mengatur semua elemen agar perhitungan ukuran lebih mudah */
+* {
+    box-sizing: border-box;
+}
+
+/* Mengatur tampilan dasar halaman */
+body {
+    margin: 0; /* Menghilangkan jarak bawaan browser */
+    font-family: Arial, sans-serif; /* Menentukan jenis tulisan */
+    background-color: #f4f6f8; /* Warna latar belakang */
+    color: #222; /* Warna teks */
+    line-height: 1.6; /* Jarak antarbaris */
+    transition: 0.3s; /* Membuat perubahan warna lebih halus */
+}
+
+/* Mengatur bagian header */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Mengatur judul pada header */
+header h1 {
+    margin: 0;
+    color: #2563eb;
+}
+
+/* Mengatur menu navigasi */
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Mengatur link navigasi */
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+/* Mengubah warna link ketika mouse diarahkan */
+nav a:hover {
+    color: #2563eb;
+}
+
+/* Mengatur semua section */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* Mengatur bagian beranda */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Mengatur foto profil */
+.hero img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Mengatur judul utama */
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Mengatur tombol */
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mengubah tampilan tombol ketika disentuh mouse */
+button:hover {
+    opacity: 0.85;
+}
+
+/* Mengatur card pendidikan */
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Mengatur footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #111827;
+    color: white;
+}
+
+
+/* ============================= */
+/* MODE GELAP */
+/* ============================= */
+
+/* Class dark-mode akan ditambahkan oleh JavaScript */
+body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+/* Mengubah warna header saat mode gelap */
+body.dark-mode header {
+    background-color: #1f2937;
+}
+
+/* Mengubah warna link saat mode gelap */
+body.dark-mode nav a {
+    color: #f9fafb;
+}
+
+/* Mengubah warna card saat mode gelap */
+body.dark-mode .card {
+    background-color: #1f2937;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+/* Aturan ini digunakan ketika layar berukuran kecil */
+@media (max-width: 600px) {
+
+    /* Membuat isi hero menjadi vertikal */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Membuat navigasi lebih mudah digunakan di HP */
+    nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+
+    /* Mengecilkan judul pada layar HP */
+    .hero h2 {
+        font-size: 28px;
+    }
+}
